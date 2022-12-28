@@ -1,0 +1,33 @@
+on: pull_request
+
+jobs:
+  example_comment_pr:
+    runs-on: ubuntu-latest
+    name: An example job to comment a PR
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            Hello world ! :wave:
+            |a|B|c|
+            |-|-|-|
+            |<img src="https://avatars.githubusercontent.com/u/12531340?s=60&v=4"/>|크|킥|
+          reactions: eyes, rocket
+
+      - name: Comment PR 1
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            Hello world ! :wave:
+          pr_number: 10
+
+      - name: Comment PR 2
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            [Preview](http://ec2-15-165-196-61.ap-northeast-2.compute.amazonaws.com:3000/)
+          pr_number: 10

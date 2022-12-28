@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    // Do not pass children as props. Instead, nest children between the opening and closing tags. eslint react/no-children-prop
+    "react/no-children-prop": "off"
+  }
+  // @Option for "Parsing error: Cannot find module 'next/babel'"
+  // Install "https://www.npmjs.com/package/@babel/eslint-parser"
+  // "parser": "@babel/eslint-parser",
+  // "parserOptions": {
+  //   "requireConfigFile": false,
+  //   "babelOptions": {
+  //     "babelrc": false,
+  //     "configFile": false,
+  //     // your babel options
+  //     "presets": [
+  //       "@babel/preset-env"
+  //     ]
+  //   }
+  // }
+}
